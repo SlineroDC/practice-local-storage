@@ -3,7 +3,7 @@ import { initLogin } from "./auth.js";
 // En el futuro puedes importar también: initRegister, initDashboard, etc.
 
 const routes = {
-  "/": { path: "/views/landing.html", roles: ["guest", "customer", "worker", "admin"] },
+  "/": { path: "/index.html", roles: ["guest", "customer", "worker", "admin"] },
   "/login": { path: "/views/login.html", roles: ["guest"] },
   "/register": { path: "/views/register.html", roles: ["guest"] },
   "/notFound": { path: "/views/404.html", roles: ["guest"] },
@@ -20,6 +20,7 @@ export async function renderRoute() {
   const route = routes[path];
 
   if (!route) {
+    console.log("mesi")
     const notFound = await fetch(routes["/notFound"].path);
     app.innerHTML = await notFound.text();
     return;
@@ -37,11 +38,12 @@ export async function renderRoute() {
   const currentRole = user ? user.role : "guest";
   const isAuthorized = route.roles.includes(currentRole);
 
-  if (!isAuthorized) {
-    const denied = await fetch(routes["/accessDenied"].path);
-    app.innerHTML = await denied.text();
-    return;
-  }
+  // if (!isAuthorized) {
+  //   const denied = await fetch(routes["/accessDenied"].path);
+  //   console.log(denied)
+  //   app.innerHTML = await denied.text();
+  //   return;
+  // }
 
   try {
     const file = await fetch(route.path);

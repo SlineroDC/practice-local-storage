@@ -25,6 +25,7 @@ body {
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  color: var(--text-dark);
 }
 
 h1 {
@@ -163,8 +164,7 @@ h1 {
   background: transparent;
 }
 
-.navbar-links a:hover,
-.navbar-links a.active {
+.navbar-links a:hover,.navbar-links a.active {
   background: var(--accent);
   color: var(--primary);
   box-shadow: 0 2px 8px rgba(160, 132, 220, 0.10);
