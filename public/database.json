@@ -4,20 +4,34 @@
       "id": "c5b5",
       "fullName": "javier combita",
       "email": "javier@gmail.com",
-      "password": "javier123+"
+      "password": "javier123+",
+      "role":"customer"
     },
     {
       "id": "55ac",
       "fullName": "lucas martinez",
       "email": "lucas@gmail.com",
-      "password": "lucas123+"
+      "password": "lucas123+",
+      "role":"customer"
     },
     {
       "id": "d737",
       "fullName": "maria magdalena",
       "email": "maria@gmail.com",
-      "password": "maria123+"
+      "password": "maria123+",
+      "role":"customer"
+    },
+    {
+      "id": "1",
+      "fullName":"admin",
+      "email":"admin@gmail.com",
+      "password":"admin12345",
+      "role": "admin"
     }
 
-  ]
+  ],
+
+  "pets":[],
+  "stays": [],
+  "instances": []
 }
