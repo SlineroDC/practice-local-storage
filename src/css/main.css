@@ -53,7 +53,9 @@ h1 {
   transform: translateY(-2px);
 }
 
-footer {
+/* */
+
+#footer {
   background-color: var(--background-dark);
   color: var(--text-light);
   padding: 2rem 1rem;
@@ -88,18 +90,17 @@ footer {
   display: inline-block;
 }
 
-.footer-icon {
+.footer-icon img {
   width: 28px;
   height: 28px;
   filter: brightness(0) invert(1);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.footer-icon:hover {
+.footer-icon img:hover {
   transform: scale(1.2);
   filter: drop-shadow(0 0 5px var(--secondary));
 }
-
 
 .main-header {
   background-color: var(--primary) !important;

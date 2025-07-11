@@ -1,4 +1,4 @@
-import "../css/login.css"
+
 import Swal from "sweetalert2"
 
 const $loginForm = document.getElementById("login-form")
