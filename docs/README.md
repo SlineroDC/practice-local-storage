@@ -25,27 +25,78 @@ The solution is built with vanilla HTML, CSS, and JavaScript, consuming a simula
 ---
 
 ## 📁 Project Structure
-``
-pet-care-center/
-├── index.html
-├── styles/
-│   ├── main.css
-│   └── components/
-├── scripts/
-│   ├── app.js
-│   ├── auth.js
-│   ├── api.js
-│   └── utils.js
-├── views/
-│   ├── landing.html
-│   ├── login.html
-│   ├── register.html
-│   ├── dashboard.html
-│   └── 404.html
-├── database.json
-├── postman_collection.json
-└── README.md
-``
+
+```
+pet-care-spa/
+├── 📄 index.html                   # Main entry point (SPA rendered here)
+│
+├── 📁 public/                      # Public static files and mock database
+│   ├── 📄 database.json            # Mock database for JSON Server
+│   └── 📁 assets/                  # Assets like images, icons, and fonts
+│       ├── 📁 images/
+│       │   ├── 🖼️ logo.png
+│       │   ├── 🖼️ logoGithub.png
+│       │   └── 📁 icons/           # Custom SVG or PNG icons
+│       │       ├── 🖼️ pet-icon.svg
+│       │       ├── 🖼️ user-icon.svg
+│       │       └── 🖼️ stay-icon.svg
+│       └── 📁 fonts/              # Optional: Custom web fonts
+│
+├── 📁 css/                         # All stylesheets
+│   ├── 📄 main.css                 # Global styles
+│   ├── 📄 variables.css            # CSS custom properties (colors, spacing, etc.)
+│   └── 📁 components/              # Styles by component
+│       ├── 📄 auth.css             # Login/Register form styles
+│       ├── 📄 dashboard.css        # Dashboard layout and widgets
+│       ├── 📄 forms.css            # Shared form components
+│       ├── 📄 cards.css            # Pet cards, user cards, etc.
+│       └── 📄 modals.css           # Modal windows (popups)
+│
+├── 📁 js/                          # JavaScript logic (modularized)
+│   ├── 📄 app.js                   # Main script (entry point)
+│   └── 📁 modules/                 # JS modules (ESM)
+│       ├── 📄 auth.js              # Authentication logic
+│       ├── 📄 api.js               # API handling (CRUD functions)
+│       ├── 📄 router.js            # SPA router logic
+│       ├── 📄 petManager.js        # Pet entity CRUD & UI
+│       ├── 📄 stayManager.js       # Stay/bookings logic
+│       ├── 📄 userManager.js       # User entity (admins, roles, etc.)
+│       └── 📄 utils.js             # Helper functions (dates, format, etc.)
+│
+├── 📁 views/                       # HTML views dynamically injected
+│   ├── 📄 landing.html             # Homepage view
+│   ├── 📄 login.html               # Login form
+│   ├── 📄 register.html            # Registration form
+│   ├── 📄 404.html                 # Not Found page
+│   ├── 📄 403.html                 # ⚠️ Access Denied page
+│   └── 📁 dashboard/
+│       ├── 📄 customer.html        # Customer role dashboard
+│       ├── 📄 worker.html          # Worker/admin dashboard
+│       └── 📁 components/          # Reusable dashboard components
+│           ├── 📄 pet-card.html
+│           ├── 📄 stay-form.html
+│           └── 📄 user-profile.html
+│
+├── 📁 docs/                        # Project documentation
+│   ├── 📄 README.md
+│   ├── 📄 API.md
+│   └── 📄 USER_GUIDE.md
+│
+├── 📁 tests/                       # Automated and manual testing
+│   ├── 📄 api.test.js              # Unit tests (or integration)
+│   └── 📁 postman/                 # Postman collection for API testing
+│       └── 📄 pet-care-api.postman_collection.json
+│
+├── 📁 config/                      # App and environment configs
+│   ├── 📄 api.config.js
+│   └── 📄 app.config.js
+│
+├── 📄 .gitignore                   # Git ignored files/folders
+├── 📄 package.json                # Project metadata and dependencies
+└── 📄 LICENSE                      # (Optional) Licensing info
+
+
+```
 ---
 
 ## 📊 Database Structure

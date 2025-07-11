@@ -1,75 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- General Meta Tags -->
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO & Meta Info -->
   <meta name="author" content="Sebastian Linero De Castro" />
   <meta name="designer" content="Sebastian Linero De Castro" />
   <meta name="copyright" content="© 2025 SlineroDC. All rights reserved" />
   <meta name="organization" content="SlineroDC" />
   <meta name="sitedomain" content="https://github.com/SlineroDC/practice-local-storage" />
   <meta name="description"
-    content="Pet Care Center SPA — A single-page app for managing pet stays, built with vanilla JavaScript, JSON-server, and modern UI practices." />
+        content="Pet Care Center SPA — A single-page app for managing pet stays, built with vanilla JavaScript, JSON-server, and modern UI practices." />
   <meta name="keywords"
-    content="Pet SPA, Pet Management, JavaScript, JSON Server, SPA, UI, Frontend, Web App, Pet Booking, Care Center" />
+        content="Pet SPA, Pet Management, JavaScript, JSON Server, SPA, UI, Frontend, Web App, Pet Booking, Care Center" />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
   <meta name="revisit-after" content="7 days" />
   <meta name="theme-color" content="#6C4AB6" />
 
   <title>Pet Care Center - Home</title>
-  <link rel="stylesheet" href="./src/css/index.css" />
-</head>
 
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="src/css/variables.css" />
+  <link rel="stylesheet" href="src/css/main.css" />
+  <link rel="stylesheet" href="src/css/components/auth.css" />
+  <link rel="stylesheet" href="src/css/components/dashboard.css" />
+  <link rel="stylesheet" href="src/css/components/forms.css" />
+</head>
 <body>
-  <header class="main-header" >
+  <!-- Navigation Header -->
+  <header id="app-header">
     <nav class="navbar">
-      <a href="#" id="logo">
-        <img src="./src/images" alt="Pet Care Center" class="logo" />
-      </a>
-      <ul class="navbar-links" id="nav-links">
-        <li><a href="#/" data-route="home">Home</a></li>
-        <li><a href="#/dashboard" data-route="dashboard">Dashboard</a></li>
-        <li><a href="#/mascotas" data-route="mascotas">Pets</a></li>
-        <!-- Admin only -->
-        <li class="admin-only"><a href="#/users" data-route="usuarios">Users</a></li>
-        <li class="admin-only"><a href="#/instancias" data-route="instancias">Instances</a></li>
-        <li id="login-logout-link"><a href="#/login" data-route="logout">Logout</a></li>
-      </ul>
+      <div class="nav-brand">
+        <img src="public/assets/images/logo.png" alt="Pet Care Logo" />
+        <span>Pet Care Center</span>
+      </div>
+      <div class="nav-actions" id="nav-actions">
+        <!-- Dynamic content based on user session -->
+      </div>
     </nav>
   </header>
 
-  <main class="container">
-    <h1>Welcome to App Pets Management</h1>
-    <section class="buttons">
-      <button id="login-btn" class="btn" onclick="location.href='src/views/login.html'">Login</button>
-      <button id="register-btn" class="btn" onclick="location.href='src/views/register.html'">Register</button>
+  <!-- Main Content -->
+  <main id="app-content">
+    <section id="loading" class="loading-spinner" aria-label="Loading screen">
+      <div class="spinner"></div>
+      <p>Loading...</p>
     </section>
   </main>
 
-  <footer >
+  <!-- Footer -->
+  <footer id="app-footer">
     <section class="footer-content">
       <p>&copy; 2025 SlineroDC. All rights reserved.</p>
-      <nav class="footer-links" aria-label="Social Links">
+      <nav class="footer-icons" aria-label="Social media links">
         <ul>
           <li>
-            <a href="https://github.com/SlineroDC/practice-local-storage" target="_blank" rel="noopener"
-              aria-label="GitHub Repository">
-              <img src="./src/images/logoGithub.png" alt="GitHub Logo" class="footer-icon" />
+            <a href="https://github.com/SlineroDC/practice-local-storage" target="_blank" rel="noopener" aria-label="GitHub Repository">
+              <img src="public/assets/images/logoGithub.png" alt="GitHub Logo" />
             </a>
           </li>
           <li>
-            <a href="https://discord.com/users/your-discord-id" target="_blank" rel="noopener" aria-label="Discord">
-              <img src="./src/images/discordLogo.png" alt="Discord Logo" class="footer-icon" />
+            <a href="https://discord.com/users/your-discord-id" target="_blank" rel="noopener" aria-label="Discord Profile">
+              <img src="public/assets/images/discordLogo.png" alt="Discord Logo" />
             </a>
           </li>
         </ul>
       </nav>
     </section>
   </footer>
-</body>
 
+  <!-- JavaScript Files -->
+  <script src="src/js/modules/utils.js"></script>
+  <script src="src/js/modules/api.js"></script>
+  <script src="src/js/modules/auth.js"></script>
+  <script src="src/js/modules/router.js"></script>
+  <script src="src/js/modules/petManager.js"></script>
+  <script src="src/js/modules/stayManager.js"></script>
+  <script src="src/js/app.js"></script>
+</body>
 </html>
