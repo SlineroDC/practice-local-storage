@@ -1,17 +1,75 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+<!-- General Meta Tags -->
+
 <head>
-  <meta charset="UTF-8">
-  <title>Inicio</title>
-  <link rel="stylesheet" href="./src/css/index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Sebastian Linero De Castro" />
+  <meta name="designer" content="Sebastian Linero De Castro" />
+  <meta name="copyright" content="© 2025 SlineroDC. All rights reserved" />
+  <meta name="organization" content="SlineroDC" />
+  <meta name="sitedomain" content="https://github.com/SlineroDC/practice-local-storage" />
+  <meta name="description"
+    content="Pet Care Center SPA — A single-page app for managing pet stays, built with vanilla JavaScript, JSON-server, and modern UI practices." />
+  <meta name="keywords"
+    content="Pet SPA, Pet Management, JavaScript, JSON Server, SPA, UI, Frontend, Web App, Pet Booking, Care Center" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="theme-color" content="#6C4AB6" />
+
+  <title>Pet Care Center - Home</title>
+  <link rel="stylesheet" href="./src/css/index.css" />
 </head>
+
 <body>
-  <div class="container">
-    <h1>Bienvenido a la App</h1>
-    <div class="buttons">
-      <a href="src/views/login.html" class="btn">Iniciar Sesión</a>
-      <a href="src/views/register.html" class="btn">Registrarse</a>
-    </div>
-  </div>
+  <header class="main-header" >
+    <nav class="navbar">
+      <a href="#" id="logo">
+        <img src="./src/images" alt="Pet Care Center" class="logo" />
+      </a>
+      <ul class="navbar-links" id="nav-links">
+        <li><a href="#/" data-route="home">Home</a></li>
+        <li><a href="#/dashboard" data-route="dashboard">Dashboard</a></li>
+        <li><a href="#/mascotas" data-route="mascotas">Pets</a></li>
+        <!-- Admin only -->
+        <li class="admin-only"><a href="#/users" data-route="usuarios">Users</a></li>
+        <li class="admin-only"><a href="#/instancias" data-route="instancias">Instances</a></li>
+        <li id="login-logout-link"><a href="#/login" data-route="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Welcome to App Pets Management</h1>
+    <section class="buttons">
+      <button id="login-btn" class="btn" onclick="location.href='src/views/login.html'">Login</button>
+      <button id="register-btn" class="btn" onclick="location.href='src/views/register.html'">Register</button>
+    </section>
+  </main>
+
+  <footer >
+    <section class="footer-content">
+      <p>&copy; 2025 SlineroDC. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Social Links">
+        <ul>
+          <li>
+            <a href="https://github.com/SlineroDC/practice-local-storage" target="_blank" rel="noopener"
+              aria-label="GitHub Repository">
+              <img src="./src/images/logoGithub.png" alt="GitHub Logo" class="footer-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.com/users/your-discord-id" target="_blank" rel="noopener" aria-label="Discord">
+              <img src="./src/images/discordLogo.png" alt="Discord Logo" class="footer-icon" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </footer>
 </body>
+
 </html>
